@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Cabecalho from './cabecalho.js';
+import Cabecalho from './header.js';
 
 module.exports = React.createClass({
 
