@@ -13,7 +13,12 @@ module.exports = {
     app.use('/public', publicPath)
 
     // Templates configuration
-	app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+  app.set('views', path.resolve(__dirname, '../src/views'));
+	app.engine('handlebars', exphbs({
+                defaultLayout: 'main',
+                layoutsDir:'src/views/layouts',
+                partialsDir:'src/views/partials'
+            }));
 	app.set('view engine', 'handlebars');
 
     return app
