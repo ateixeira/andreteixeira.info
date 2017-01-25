@@ -9,10 +9,12 @@ module.exports = React.createClass({
         
         return (
             <div>
+                <br/><br/>
                 <Cabecalho />
                 <div className="conteudo">
-                	{this.props.children}
-            	</div>
+                    {this.props.children}
+                </div>
+                <br/><br/><br/><br/>
             </div>
         );
     }
