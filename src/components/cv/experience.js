@@ -20,7 +20,7 @@ module.exports = React.createClass({
                 </td>
                 <td className="content">
                     <p className="position">
-                        <strong> FrontEnd Engineer </strong>
+                        <strong> {this.props.experience.title} </strong>
                         <span className="tag"> #Android </span>
                         <span className="tag"> #Android </span>
                         <span className="tag"> #Android </span>
@@ -28,11 +28,11 @@ module.exports = React.createClass({
                     </p>
                     <p className="company">
                         <FontAwesome name='home' />
-                        <span className="">Urbanizo &ndash; Brasília, DF, Brazil</span>
+                        <span className="">{this.props.experience.location}</span>
                         <FontAwesome name='user' />
-                        <span className="">Marcos Beto</span>
+                        <span className="">{this.props.experience.contact_name}</span>
                         <FontAwesome name='phone' />
-                        <span className="">+55 61 98158-5100</span>
+                        <span className="">{this.props.experience.contact_phone}</span>
                     </p>
                     <p className="description">
                         Very strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis turpis ac porttitor malesuada. Donec eu vehicula tortor. Nulla scelerisque augue turpis, vel vestibulum turpis gravida id. Maecenas vel efficitur ligula.
