@@ -16,7 +16,7 @@ module.exports = React.createClass({
         return (
             <section className="work-experience">
                 <div className="workexp wrap">
-                    <h2> <FontAwesome name='briefcase' /> Work Experience <small>  &ndash; 12 years committed to full-time jobs, consulting, Startups and OSS contributions</small></h2>
+                    <h2> <FontAwesome name='briefcase' /> Work Experience <small>  &ndash; 10 years committed to full-time jobs, consulting and Startups</small></h2>
                 </div>
                 <div className="workexp wrap">
 

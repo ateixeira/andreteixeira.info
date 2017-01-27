@@ -12,8 +12,6 @@ module.exports = React.createClass({
 
     // RENDER
     render: function() {
-
-    	console.log(data);
         
         return (
             <div className="cv">

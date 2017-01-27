@@ -6,12 +6,17 @@ module.exports = React.createClass({
     // RENDER
     render: function() {
         
+        var hashtags = [];
+        this.props.experience.hashtags.forEach((hashtag) => {
+            hashtags.push(<span className="tag"> #{hashtag} </span>);
+        });
+
         return (
             <tr>
                 <td className="dates">
-                    from <strong> Ago, 2001 </strong>
+                    from <strong> {this.props.experience.from} </strong>
                     <br/>
-                    until <strong> Ago 2004</strong>
+                    until <strong> {this.props.experience.until} </strong>
                 </td>
 
                 <td className="line">
@@ -21,21 +26,19 @@ module.exports = React.createClass({
                 <td className="content">
                     <p className="position">
                         <strong> {this.props.experience.title} </strong>
-                        <span className="tag"> #Android </span>
-                        <span className="tag"> #Android </span>
-                        <span className="tag"> #Android </span>
-                        <span className="tag"> #Android </span>
+                        {hashtags}
+
                     </p>
                     <p className="company">
                         <FontAwesome name='home' />
-                        <span className="">{this.props.experience.location}</span>
+                        <span className=""> {this.props.experience.location} </span>
                         <FontAwesome name='user' />
-                        <span className="">{this.props.experience.contact_name}</span>
-                        <FontAwesome name='phone' />
-                        <span className="">{this.props.experience.contact_phone}</span>
+                        <span className=""> {this.props.experience.contact_name} </span>
+                        <FontAwesome name={this.props.experience.contact_icon} />
+                        <span className=""> {this.props.experience.contact_value} </span>
                     </p>
                     <p className="description">
-                        Very strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis turpis ac porttitor malesuada. Donec eu vehicula tortor. Nulla scelerisque augue turpis, vel vestibulum turpis gravida id. Maecenas vel efficitur ligula.
+                        {this.props.experience.information}
                     </p>
                 </td>
             </tr>
