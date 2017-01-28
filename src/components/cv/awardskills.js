@@ -2,6 +2,8 @@ import React from 'react';
 import { Table, Grid, Row, Col, Button } from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
 
+import Rating from './rating';
+
 module.exports = React.createClass({
     // RENDER
     render: function() {
@@ -77,27 +79,32 @@ module.exports = React.createClass({
 
                                                             <li>
                                                                 <span className="competence">JavaScript</span>
-                                                                <span className="rating">5</span>
+                                                                <Rating level={5}/>
                                                                 <p className="description">NodeJS, BackboneJS, ReactJS</p>
                                                             </li>
 
-
                                                             <li>
                                                                 <span className="competence">Python</span>
-                                                                <span className="rating">5</span>
+                                                                <Rating level={5}/>
                                                                 <p className="description">Built a startup using it in backend</p>
                                                             </li>
 
                                                             <li>
+                                                                <span className="competence">Java</span>
+                                                                <Rating level={3}/>
+                                                                <p className="description">Mostly on application server side</p>
+                                                            </li>
+
+                                                            <li>
                                                                 <span className="competence">English</span>
-                                                                <span className="rating">5</span>
+                                                                <Rating level={5}/>
                                                                 <p className="description">Full professional proeficiency</p>
                                                             </li>
 
                                                             <li>
                                                                 <span className="competence">Spanish</span>
-                                                                <span className="rating"> <span className="rating-5"/> </span>
-                                                                <p className="description">Sigo aprendiendo</p>
+                                                                <Rating level={4}/>
+                                                                <p className="description"><i>Sigo aprendiendo</i></p>
                                                             </li>
 
                                                         </ul>
@@ -105,9 +112,33 @@ module.exports = React.createClass({
                                                     <td width='50%'>
                                                         <ul>
                                                             <li>
-                                                                <span className="competence">JavaScript</span>
-                                                                <span className="rating">5</span>
-                                                                <p className="description">Using it professionally since 2003</p>
+                                                                <span className="competence">Back-end</span>
+                                                                <Rating level={5}/>
+                                                                <p className="description">Django, NodeJS, Rails</p>
+                                                            </li>
+
+                                                            <li>
+                                                                <span className="competence">Front-end</span>
+                                                                <Rating level={5}/>
+                                                                <p className="description">BackboneJS, ReactJS, Angular, SASS</p>
+                                                            </li>
+
+                                                            <li>
+                                                                <span className="competence">Databases</span>
+                                                                <Rating level={4}/>
+                                                                <p className="description">MongoDB, OracleDB, MySQL</p>
+                                                            </li>
+
+                                                            <li>
+                                                                <span className="competence">Design</span>
+                                                                <Rating level={3}/>
+                                                                <p className="description">"Independent programmer"</p>
+                                                            </li>
+
+                                                            <li>
+                                                                <span className="competence">OS</span>
+                                                                <Rating level={4}/>
+                                                                <p className="description">Linux, Unix, Shell script</p>
                                                             </li>
                                                         </ul>
                                                     </td>

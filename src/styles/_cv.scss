@@ -320,35 +320,13 @@
                         }
                     }
 
-                    .rating-5 {
-                    
-                    }
 
                     .rating {
                         float: right;
-                        i.fa {
+                        .fa {
                             color: lighten($font-color-light, 10%);
                             display: inline-block;
                             margin-right: 2px;
-                            
-                            &.accent {
-                                color: $accent;
-                                &:nth-child(1) {
-                                    color: lighten($accent, 20%);
-                                }
-                                &:nth-child(2) {
-                                    color: lighten($accent, 15%);
-                                }
-                                &:nth-child(3) {
-                                    color: lighten($accent, 10%);
-                                }
-                                &:nth-child(4) {
-                                    color: lighten($accent, 5%);
-                                }
-                            }
-                            &:last-child {
-                                margin-right: 0;
-                            }
                         }
                     }
                 }
