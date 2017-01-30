@@ -19,7 +19,7 @@ module.exports = React.createClass({
                     <h1>CURRICULUM VITAE</h1>
                    	<Info />
                    	<WorkExperience experiences={data.EXPERIENCES}/>
-                   	<AwardsSkills />
+                   	<AwardsSkills skills={data.SKILLS}/>
                 </div>
                 <br/>
             </div>

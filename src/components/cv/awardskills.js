@@ -2,11 +2,23 @@ import React from 'react';
 import { Table, Grid, Row, Col, Button } from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
 
-import Rating from './rating';
+import Skill from './skill';
 
 module.exports = React.createClass({
     // RENDER
     render: function() {
+
+        var column1 = [];
+        var column2 = [];
+        var skills_length = this.props.skills.length;
+
+        this.props.skills.forEach((skill) => {
+            if (skill.id <= skills_length/2) {
+                column1.push(<Skill key={skill.id} skill={skill} />);
+            } else {
+                column2.push(<Skill key={skill.id} skill={skill} />);
+            }
+        });
         
         return (
             <section className="education-skills">
@@ -76,70 +88,12 @@ module.exports = React.createClass({
                                                 <tr>
                                                     <td width='50%'>
                                                         <ul>
-
-                                                            <li>
-                                                                <span className="competence">JavaScript</span>
-                                                                <Rating level={5}/>
-                                                                <p className="description">NodeJS, BackboneJS, ReactJS</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">Python</span>
-                                                                <Rating level={5}/>
-                                                                <p className="description">Built a startup using it in backend</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">Java</span>
-                                                                <Rating level={3}/>
-                                                                <p className="description">Mostly on application server side</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">English</span>
-                                                                <Rating level={5}/>
-                                                                <p className="description">Full professional proeficiency</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">Spanish</span>
-                                                                <Rating level={4}/>
-                                                                <p className="description"><i>Sigo aprendiendo</i></p>
-                                                            </li>
-
+                                                            {column1}
                                                         </ul>
                                                     </td>
                                                     <td width='50%'>
                                                         <ul>
-                                                            <li>
-                                                                <span className="competence">Back-end</span>
-                                                                <Rating level={5}/>
-                                                                <p className="description">Django, NodeJS, Rails</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">Front-end</span>
-                                                                <Rating level={5}/>
-                                                                <p className="description">BackboneJS, ReactJS, Angular, SASS</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">Databases</span>
-                                                                <Rating level={4}/>
-                                                                <p className="description">MongoDB, OracleDB, MySQL</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">Design</span>
-                                                                <Rating level={3}/>
-                                                                <p className="description">"Independent programmer"</p>
-                                                            </li>
-
-                                                            <li>
-                                                                <span className="competence">OS</span>
-                                                                <Rating level={4}/>
-                                                                <p className="description">Linux, Unix, Shell script</p>
-                                                            </li>
+                                                            {column2}
                                                         </ul>
                                                     </td>
                                                 </tr>

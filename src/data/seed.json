@@ -65,5 +65,56 @@
         "contact_icon": "envelope",
         "contact_value": "renato.paz@oracle.com",
         "information": "Have been the Solution Specialist on dozens of huge deals. Took a deep dive on UNIX systems. On the second yearwas selected to be part of Oracle Center of Excelence, as security options, Identity Management and High Availability specialist. "
+    }],
+    "SKILLS": [{
+        "id": 1,
+        "title": "Javascript",
+        "rating": 5,
+        "description": "NodeJS, BackboneJS, ReactJS"
+    },{
+        "id": 2,
+        "title": "Python",
+        "rating": 5,
+        "description": "Built a startup using it in backend"
+    },{
+        "id": 3,
+        "title": "Java",
+        "rating": 3,
+        "description": "Mostly on application server side"
+    },{
+        "id": 4,
+        "title": "English",
+        "rating": 5,
+        "description": "Full professional proeficiency"
+    },{
+        "id": 5,
+        "title": "Spanish",
+        "rating": 4,
+        "description": "Sigo aprendiendo"
+    },{
+        "id": 6,
+        "title": "Back-end",
+        "rating": 5,
+        "description": "Django, NodeJS, Rails"
+    },{
+        "id": 7,
+        "title": "Front-end",
+        "rating": 5,
+        "description": "BackboneJS, ReactJS, Angular, SASS"
+    },{
+        "id": 8,
+        "title": "Databases",
+        "rating": 4,
+        "description": "MongoDB, OracleDB, MySQL"
+    },{
+        "id": 9,
+        "title": "Design",
+        "rating": 3,
+        "description": "\"Independent programmer\""
+    },{
+        "id": 10,
+        "title": "OS",
+        "rating": 4,
+        "description": "Linux, Unix, Shell script"
     }]
 }
