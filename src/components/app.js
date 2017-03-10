@@ -1,21 +1,21 @@
-import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions/actionCreators';
+import Main from './main';
 
 import Cabecalho from './header.js';
 
-module.exports = React.createClass({
+function mapStateToProps(state) {
+  return {
+    posts: state.posts,
+    comments: state.comments
+  }
+}
 
-    // RENDER
-    render: function() {
-        
-        return (
-            <div>
-                <br/><br/>
-                <Cabecalho />
-                <div className="conteudo">
-                    {this.props.children}
-                </div>
-                <br/><br/><br/><br/>
-            </div>
-        );
-    }
-});
+function mapDispachToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+const App = connect(mapStateToProps, mapDispachToProps)(Main);
+
+export default App;

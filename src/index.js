@@ -1,23 +1,14 @@
 import React from 'react';
-import { render } from 'react-dom'
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import { render } from 'react-dom';
 
+// Import css - It is not explicitly used, but being here assures it will be compiled by webpack
 import Style from './styles/style.scss';
 
-import App from './components/app.js';
-import Home from './components/home.js';
-import Blog from './components/blog.js';
-import Dashboard from './components/dashboard.js';
-import Cv from './components/cv.js';
+//Import React Router and it's dependencies
+import { Router, browserHistory } from 'react-router'
+
+import routes from './routes';
 
 render((
-  <Router history={hashHistory}>
-    <Route path="/" component={App}>
-      {/* make them children of `App` */}
-      <IndexRoute component={Home}/>
-      <Route path="/blog" component={Blog}/>
-      <Route path="/dashboard" component={Dashboard}/>
-      <Route path="/cv" component={Cv}/>
-    </Route>
-  </Router>
+  <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0, 0)}/>
 ), document.getElementById('container'))
