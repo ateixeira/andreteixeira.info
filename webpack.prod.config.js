@@ -11,7 +11,8 @@ const webpackConfig = {
 
     output: {
         path: path.join(__dirname, 'public'),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: '/public/'
     },
 
     plugins: [
