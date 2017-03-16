@@ -4,6 +4,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 console.log("Public path");
 console.log(path.join(__dirname, 'public'));
+console.log("process.env.PWD");
+console.log(process.env.PWD = process.cwd());
 
 const webpackConfig = {
     devtool: 'source-map',
