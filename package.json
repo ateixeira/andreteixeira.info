@@ -27,6 +27,7 @@
   "homepage": "https://github.com/ateixeira/mern-stack#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-cli": "^6.23.0",
     "chai": "^3.5.0",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
@@ -53,11 +54,8 @@
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.6",
     "react-dom": "^15.3.2",
-<<<<<<< HEAD
     "react-fontawesome": "^1.5.0",
-=======
     "react-redux": "^5.0.2",
->>>>>>> 9db475ed14856bdb3ea775423a77e1e8217ce71c
     "react-router": "^3.0.0",
     "react-router-bootstrap": "^0.23.1",
     "react-router-redux": "^4.0.8",

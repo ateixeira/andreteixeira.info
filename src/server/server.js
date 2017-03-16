@@ -5,6 +5,7 @@ import { renderToString } from 'react-dom/server';
 
 import server_config from './config.js';
 import routes from '../routes';
+import NotFoundPage from '../components/notfoundpage';
 
 const port = process.env.PORT || 3000;
 const app = server_config.app();
@@ -27,18 +28,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.get('*', (req, res) => {
-    console.log("req");
-    console.log(req.url);
     match(
         { routes, location: req.url },
         (err, redirectLocation, renderProps) => {
-
-            console.log("err");
-            console.log(err);
-            console.log("redirectLocation");
-            console.log(redirectLocation);
-            // console.log("renderProps");
-            // console.log(renderProps);
 
             // in case of error display the error message
             if (err) {
@@ -60,9 +52,6 @@ app.get('*', (req, res) => {
                 markup = renderToString(<NotFoundPage/>);
                 res.status(404);
             }
-
-            console.log("markup");
-            console.log(markup);
 
             // render the index template with the embedded React markup
             return res.render('index', { markup });

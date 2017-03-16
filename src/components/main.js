@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import Cabecalho from './cabecalho';
+import Cabecalho from './header';
 
 const Main = React.createClass({
     render() {

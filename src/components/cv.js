@@ -8,11 +8,8 @@ import data from "../data/seed"
 
 
 module.exports = React.createClass({
-
-
     // RENDER
-    render: function() {
-        
+    render: function() {        
         return (
             <div className="cv">
                 <div className="box">

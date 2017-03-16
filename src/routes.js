@@ -11,7 +11,7 @@ import Home from './components/home.js';
 import NotFoundPage from './components/notfoundpage.js';
 
 const routes = (
-	<Route path="/" component={App}>
+	<Route path="/" component={Main}>
       {/* make them children of `App` */}
       <IndexRoute component={Home}/>
       <Route path="/blog" component={Blog}/>
