@@ -9,7 +9,7 @@ import NotFoundPage from '../components/notfoundpage';
 
 const port = process.env.PORT || 3000;
 const app = server_config.app();
-const conn_mongo = server_config.conn_mongo();
+// const conn_mongo = server_config.conn_mongo();
 const server = new Server(app);
 
 // Development configuration
