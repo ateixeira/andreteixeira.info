@@ -2,6 +2,9 @@ const path = require('path')
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+console.log("Public path");
+console.log(path.join(__dirname, 'public'));
+
 const webpackConfig = {
     devtool: 'source-map',
 
