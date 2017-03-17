@@ -4,13 +4,10 @@ import exphbs  from 'express-handlebars';
 
 const mongoose = require('mongoose');
 
-console.log("__dirname no config.js");
-console.log(__dirname);
-
 module.exports = {
     app: function () {
         const app = express();
-        const publicPath = express.static(path.resolve(__dirname, '../public'));
+        const publicPath = express.static(path.resolve(__dirname, '../../public'));
 
         // Defining assets configuration
         app.use('/public', publicPath)
